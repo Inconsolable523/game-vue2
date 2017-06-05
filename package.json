@@ -1,5 +1,5 @@
 {
-//  todo:http-server和webpack-dev-server有什么区别
+
   "name": "game-vue2",
   "version": "1.0.0",
   "description": "a game basic on vue2",
