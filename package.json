@@ -7,8 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "del-cli build -f",
-    "build": "webpack",
-    "dev": "webpack-dev-server --progress --config  webpack.dev.conf.js",
+    "build": "webpack --config webpack.dev.conf.js",
+    "dev": "webpack-dev-server --progress --hot --config  webpack.dev.conf.js",
     "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js"
   },
   "repository": {
