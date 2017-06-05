@@ -4,7 +4,7 @@
 var path = require('path');
 var webpack=require('webpack');
 
-
+// Todo:浏览器自动刷新，压缩，热加载
 module.exports = {
   entry:{
     app:path.resolve(__dirname, 'src/main.js'),

@@ -2,26 +2,20 @@ var path = require('path');
 var HtmlwebpackPliugin = require('html-webpack-plugin');
 
 
-// Todo:浏览器自动刷新，压缩，热加载
+
 module.exports = {
   entry: path.resolve(__dirname, 'src/main.js'),
   output: {
-    path: path.resolve(__dirname + '/build'),
-    filename: 'bundle.js',
-    // publicPath:'/build'
+    filename: '[name].[hash].bundle.js'
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json']
+    extensions: ['.js', '.vue']
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         loader: 'babel-loader',
-        options: {
-          plugins: ['transform-runtime'],
-          presets: ['es2015']
-        },
         exclude: /node_modules/
 
       },
@@ -64,6 +58,7 @@ module.exports = {
 
     ]
   },
+  // 实现js入口文件自动注入
   plugins: [
     new HtmlwebpackPliugin({
       inject: 'body',
