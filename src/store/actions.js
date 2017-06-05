@@ -1,5 +1,5 @@
 import { STATUS } from './mutation-types';
-import random from '../util/random';
+import {shuffle} from '../util/shuffle';
 
 const cardNames = ['8-ball', 'kronos', 'baked-potato', 'dinosaur', 'rocket', 'skinny-unicorn',
   'that-guy', 'zeppelin'];
@@ -11,7 +11,7 @@ export default {
       leftmathed: 8,
       highestScore: localStorage.getItem('highestScore') || 9999,
       status: STATUS.READY,
-      cards: random(cardNames.concat(cardNames)).map(name => ({ flipped: false, cardNames: name })),
+      cards: shuffle(cardNames.concat(cardNames)).map(name => ({ flipped: false, cardName: name })),
       takeTime: 0
     })
   }
