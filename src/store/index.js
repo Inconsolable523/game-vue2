@@ -9,7 +9,7 @@ Vue.use(Vuex);
 
 const state = {
   leftmathed: 0,
-  highestScore: 0,
+  bestScore: 0,
   status: '',
   cards: [],
   takeTime: 0

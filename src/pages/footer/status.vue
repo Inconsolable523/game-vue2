@@ -23,9 +23,6 @@
         return this.$store.state.takeTime;
       }
     },
-    mounted(){
-      console.log(this.status);
-    },
     methods: {
       ...mapActions([
         'reset'

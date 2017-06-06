@@ -13,6 +13,7 @@
   import playStatus from './pages/footer/status.vue';
 
   import { mapActions } from 'vuex';
+  import { STATUS } from './store/mutation-types';
 
   export default {
     name: 'game-panel',
@@ -30,7 +31,6 @@
       ])
     },
     created(){
-//          触发游戏重置
       this.reset();
     }
   }

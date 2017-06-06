@@ -1,7 +1,7 @@
 export default {
   reset(state, payload){
     state.leftmathed = payload.leftmathed;
-    state.highestScore = payload.highestScore;
+    state.bestScore = payload.bestScore;
     state.status = payload.status;
     state.cards = payload.cards;
     state.takeTime = payload.takeTime;
@@ -17,12 +17,12 @@ export default {
   count(state){
     state.takeTime++;
   },
-  updateHighetScore(state){
-    if (!localStorage.getItem('highestScore')) {
-      return localStorage.setItem('highestScore', state.highestScore);
+  updateBestScore(state){
+    if (!localStorage.getItem('bestScore')) {
+      return localStorage.setItem('bestScore', state.takeTime);
     }
-    if (localStorage.getItem('highestScore') > state.highestScore) {
-      return localStorage.setItem('highestScore', state.highestScore);
+    if (localStorage.getItem('bestScore') > state.takeTime) {
+      return localStorage.setItem('bestScore', state.takeTime);
     }
   },
   decreaseMatch(state){

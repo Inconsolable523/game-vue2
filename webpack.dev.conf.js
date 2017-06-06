@@ -9,8 +9,7 @@ module.exports = merge(common, {
   },
   devServer: {
     port: 8080, // 服务器端口
-    inline: true,
-    port: 8080
+    inline: true
 
   },
   // cheap-module-eval-source-map is faster for development

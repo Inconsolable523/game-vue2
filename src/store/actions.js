@@ -12,14 +12,14 @@ let statusHandler = {
   },
   PASS: function ({ commit }) {
     clearInterval(timerId);
-    commit('updateHighetScore');
+    commit('updateBestScore');
   }
 }
 export default {
   reset({ commit }){
     commit('reset', {
       leftmathed: 8,
-      highestScore: localStorage.getItem('highestScore') || 9999,
+      bestScore: localStorage.getItem('bestScore') || 9999,
       status: STATUS.READY,
       cards: shuffle(cardNames.concat(cardNames)).map(name => ({ flipped: false, cardName: name })),
       takeTime: 0

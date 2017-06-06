@@ -28,7 +28,7 @@
         return this.$store.state.status;
       },
       leftMatched(){
-        return  this.$store.state.leftMatched;
+        return  this.$store.state.leftmathed;
       }
     },
     methods:{
@@ -54,7 +54,7 @@
 //          配对成功
           this.match();
 //          如果所有的牌都配对完毕，变换状态，游戏结束
-          return this.leftmathed || this.updateStatus(STATUS.PASS);
+          return this.leftMatched || this.updateStatus(STATUS.PASS);
         }
 
 //        最后一种情况，有牌被翻了，花色不同

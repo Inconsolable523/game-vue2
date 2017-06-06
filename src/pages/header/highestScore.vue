@@ -1,26 +1,26 @@
 <template>
-    <div class="highestScore">
-        <span>Highest Speed</span>
-      <h2>{{highestScore}}</h2>
-    </div>
+  <div class="bestScore">
+    <span>Highest Speed</span>
+    <h2>{{bestScore}}</h2>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: 'highestScore',
-        data() {
-            return {}
-        },
-      computed:{
-        highestScore(){
-          return this.$store.state.highestScore;
-        }
+  export default {
+    name: 'bestScore',
+    data() {
+      return {}
+    },
+    computed: {
+      bestScore(){
+        return this.$store.state.bestScore;
       }
     }
+  }
 </script>
 
 <style lang="scss" scoped>
-  .highestScore{
+  .bestScore {
     width: 120px;
     height: 100px;
     background-color: #bbada0;
@@ -30,13 +30,13 @@
     align-items: center;
     flex-direction: column;
     color: #eae0d1;
-    span{
+    span {
       font-size: 19px;
       font-weight: bold;
       width: 100%;
       text-align: center;
     }
-    h2{
+    h2 {
       color: #fff;
     }
   }

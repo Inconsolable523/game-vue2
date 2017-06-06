@@ -9,7 +9,7 @@
     "prebuild": "del-cli build -f",
     "build": "webpack --config webpack.dev.conf.js",
     "dev": "webpack-dev-server --progress --hot --config  webpack.dev.conf.js",
-    "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js"
+    "deploy": "NODE_ENV=production webpack -p --config webpack.prod.conf.js"
   },
   "repository": {
     "type": "git",
