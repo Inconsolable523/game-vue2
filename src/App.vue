@@ -3,7 +3,7 @@
     <!--组装组件-->
     <dash-board></dash-board>
     <chess-board></chess-board>
-    <!--<play-status></play-status>-->
+    <play-status></play-status>
   </div>
 </template>
 
