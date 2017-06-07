@@ -31,7 +31,7 @@
     }
   }
 
-  @media screen and (max-width: 410px) {
+  @media screen and (max-width: 380px) {
     .logo {
       width: 130px;
       height: 80px;

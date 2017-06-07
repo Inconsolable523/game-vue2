@@ -55,7 +55,7 @@
     }
   }
 
-  @media screen and (max-width: 410px) {
+  @media screen and (max-width: 380px) {
     .matchProgress {
       width: 100px;
       height: 80px;
