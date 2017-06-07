@@ -15,7 +15,7 @@ module.exports = merge(common, {
   // cheap-module-eval-source-map is faster for development
   devtool: '#cheap-module-eval-source-map',
   plugins:[
-     new webpack.HotModuleReplacementPlugin()// 添加热替换插件
-  //
+    new webpack.HotModuleReplacementPlugin(),// 添加热替换插件
+
   ]
 })
