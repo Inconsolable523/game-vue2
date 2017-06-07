@@ -51,7 +51,8 @@
 
 <!--todo:两张图片合一-->
 <style lang="scss" scoped>
-  .wrap {
+
+  .wrap{
     width: 100px;
     height: 121px;
     margin-right: 3px;
@@ -65,17 +66,10 @@
     height: 100%;
     transition: transform 1s;
     transform-style: preserve-3d;
-    img {
-      display: block;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      backface-visibility: hidden;
-    }
   }
 
   .card.flipped {
-    transform: rotateY(180deg);
+    transform: rotateY( 180deg );
   }
 
   .card img {
@@ -88,36 +82,30 @@
 
   .card .back {
     background: blue;
-    transform: rotateY(0deg);
+    transform: rotateY( 0deg );
   }
 
   .card .front {
     background: blue;
-    transform: rotateY(180deg);
+    transform: rotateY( 180deg );
   }
 
   @media screen and (max-width: 450px) {
-    .container {
+    .wrap{
       width: 92px;
       height: 111px;
       margin-right: 1px;
     }
   }
 
-  @media screen and (max-width: 380px) {
-    .container {
-      width: 85px;
+  @media screen and (max-width: 414px) {
+    .wrap{
+      width: 80px;
       height: 102px;
       margin-right: 1px;
     }
   }
 
-  @media screen and (max-width: 360px) {
-    .container {
-      width: 70px;
-      height: 84px;
-      margin-right: 1px;
-    }
-  }
+
 </style>
 

@@ -38,6 +38,7 @@
 
 <style scoped>
   .game-panel {
+    min-width: 375px;
     width: 450px;
     height: 670px;
     border: 4px solid #bdbdbd;
@@ -51,7 +52,6 @@
   @media screen and (max-width: 450px) {
     .game-panel {
       width: 100%;
-      height: 100%;
       justify-content: space-around;
     }
 
