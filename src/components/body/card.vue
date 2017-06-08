@@ -1,10 +1,12 @@
 <template>
-  <div class="wrap" @click="flip">
+  <div class="wrap" @click="flip" >
     <div class="card" :class="{flipped:option.flipped}">
       <img class="front" v-if="option.cardName === 'beauty1'" src="../../assets/img/beauty1.png"/>
       <img class="front" v-if="option.cardName === 'beauty2'" src="../../assets/img/beauty2.png"/>
       <img class="front" v-if="option.cardName === 'beauty3'" src="../../assets/img/beauty3.png"/>
       <img class="front" v-if="option.cardName === 'beauty4'" src="../../assets/img/beauty4.png"/>
+      <img class="front" v-if="option.cardName === 'beauty5'" src="../../assets/img/beauty5.png"/>
+      <img class="front" v-if="option.cardName === 'beauty6'" src="../../assets/img/beauty6.png"/>
       <img class="front" v-if="option.cardName === 'boy1'" src="../../assets/img/boy1.jpg"/>
       <img class="front" v-if="option.cardName === 'boy2'" src="../../assets/img/boy2.jpg"/>
       <img class="front" v-if="option.cardName === 'boy3'" src="../../assets/img/boy3.jpg"/>
@@ -31,7 +33,9 @@
       }
     },
     data() {
-      return {}
+      return {
+        index:1
+      }
     },
     methods: {
       ...mapActions([

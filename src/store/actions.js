@@ -1,8 +1,8 @@
-import { STATUS } from './mutation-types';
-import { shuffle } from '../util/shuffle';
+// import { STATUS } from './mutation-types';
+// import { shuffle } from '../util/shuffle';
 
-const cardNames = ['beauty1', 'beauty2', 'beauty3', 'beauty4', 'boy1', 'boy2',
-  'boy3', 'boy4'];
+// const cardNames = ['beauty1', 'beauty2', 'beauty3', 'beauty4', 'boy1', 'boy2',
+//   'boy3', 'boy4'];
 let timerId;
 let statusHandler = {
   PLAYING: function ({ commit }) {
@@ -16,15 +16,15 @@ let statusHandler = {
   }
 }
 export default {
-  reset({ commit }){
-    commit('reset', {
-      leftmathed: 8,
-      bestScore: localStorage.getItem('bestScore') || 9999,
-      status: STATUS.READY,
-      cards: shuffle(cardNames.concat(cardNames)).map(name => ({ flipped: false, cardName: name })),
-      takeTime: 0
-    })
-  },
+  // reset({ commit }){
+  //   commit('reset', {
+  //     leftmathed: 8,
+  //     bestScore: localStorage.getItem('bestScore') || 9999,
+  //     status: STATUS.READY,
+  //     cards: shuffle(cardNames.concat(cardNames)).map(name => ({ flipped: false, cardName: name })),
+  //     takeTime: 0
+  //   })
+  // },
   flipCard({ commit }, card){
     commit('flip', card);
   },

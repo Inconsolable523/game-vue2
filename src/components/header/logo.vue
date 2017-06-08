@@ -1,5 +1,5 @@
 <template>
-  <h1 class="logo">Memory</h1>
+  <h1 class="logo" @click="menu">Memu</h1>
 </template>
 
 <script>
@@ -7,6 +7,11 @@
     name: 'logo',
     data() {
       return {}
+    },
+    methods:{
+      menu(){
+        this.$router.push('/menu');
+      }
     }
   }
 </script>
@@ -20,6 +25,7 @@
     background-color: #5979ac;
     color: #fff;
     text-align: center;
+    cursor: pointer;
   }
 
   @media screen and (max-width: 436px) {

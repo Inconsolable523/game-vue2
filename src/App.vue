@@ -1,37 +1,15 @@
 <template>
   <div class="game-panel">
-    <!--组装组件-->
-    <dash-board></dash-board>
-    <chess-board></chess-board>
-    <play-status></play-status>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import dashBoard from './pages/header/dashBoard.vue';
-  import chessBoard from './pages/body/chessBoard.vue';
-  import playStatus from './pages/footer/status.vue';
-
-  import { mapActions } from 'vuex';
-  import { STATUS } from './store/mutation-types';
 
   export default {
-    name: 'game-panel',
-    components: {
-      dashBoard,
-      chessBoard,
-      playStatus
-    },
+    name: 'menu',
     data() {
       return {}
-    },
-    methods: {
-      ...mapActions([
-        'reset'//映射this.reset()为this.$store.dispatch('reset')
-      ])
-    },
-    created(){
-      this.reset();
     }
   }
 </script>
@@ -40,21 +18,13 @@
   .game-panel {
     min-width: 375px;
     width: 450px;
-    height: 670px;
+    /*height: 670px;*/
     border: 4px solid #bdbdbd;
     border-radius: 2px;
     background-color: #fafaef;
     padding: 10px;
     display: flex;
     flex-direction: column;
-  }
-
-  @media screen and (max-width: 450px) {
-    .game-panel {
-      width: 100%;
-      justify-content: space-around;
-    }
-
   }
 
 </style>

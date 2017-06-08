@@ -12,7 +12,8 @@ const state = {
   bestScore: 0,
   status: '',
   cards: [],
-  takeTime: 0
+  takeTime: 0,
+  flag:1//设置等级
 };
 
 export default new Vuex.Store({
