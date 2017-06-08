@@ -1,8 +1,8 @@
 import { STATUS } from './mutation-types';
 import { shuffle } from '../util/shuffle';
 
-const cardNames = ['8-ball', 'kronos', 'baked-potato', 'dinosaur', 'rocket', 'skinny-unicorn',
-  'that-guy', 'zeppelin'];
+const cardNames = ['beauty1', 'beauty2', 'beauty3', 'beauty4', 'boy1', 'boy2',
+  'boy3', 'boy4'];
 let timerId;
 let statusHandler = {
   PLAYING: function ({ commit }) {
