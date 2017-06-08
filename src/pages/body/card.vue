@@ -15,7 +15,7 @@
 </template>
 
 <script>
-  import {mapActions} from 'vuex';
+  import { mapActions } from 'vuex';
 
   export default {
     name: 'card',
@@ -33,43 +33,45 @@
     data() {
       return {}
     },
-    methods:{
+    methods: {
       ...mapActions([
         'flipCard'
       ]),
       flip(){
-        if(this.option.flipped){
+        if (this.option.flipped) {
           return;
         }
         this.flipCard(this.option);
-        this.$emit('flipped',this.option);
+        this.$emit('flipped', this.option);
       }
 
     }
   }
 </script>
 
-<!--todo:两张图片合一-->
 <style lang="scss" scoped>
 
-  .wrap{
+  .wrap {
     width: 100px;
     height: 121px;
     margin-right: 3px;
     cursor: pointer;
     position: relative;
     perspective: 800px;
+    -webkit-perspective: 800px;
   }
 
   .card {
+    position: relative;
     width: 100%;
     height: 100%;
     transition: transform 1s;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d; /* Safari 和 Chrome */
   }
 
   .card.flipped {
-    transform: rotateY( 180deg );
+    transform: rotateY(-180deg);
   }
 
   .card img {
@@ -77,23 +79,21 @@
     height: 100%;
     width: 100%;
     position: absolute;
+    left: 0;
+    top: 0;
+    background: blue;/*？？？*/
     backface-visibility: hidden;
   }
 
-  .card .back {
-    background: blue;
-    transform: rotateY( 0deg );
+  .card .front {
+    transform: rotateY(180deg);
+    border: 2px solid #777;
+    border-radius: 6px;
   }
 
-  .card .front {
-    background: blue;
-    border: 2px solid #777777;
-    border-radius: 6px;
-    transform: rotateY( 180deg );
-  }
 
   @media screen and (max-width: 450px) {
-    .wrap{
+    .wrap {
       width: 92px;
       height: 111px;
       margin-right: 1px;
@@ -101,7 +101,7 @@
   }
 
   @media screen and (max-width: 414px) {
-    .wrap{
+    .wrap {
       width: 80px;
       height: 102px;
       margin-right: 1px;
