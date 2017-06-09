@@ -41,33 +41,5 @@
     }
   }
 
-  @media screen and (max-width: 436px) {
-    .bestScore {
-      width: 110px;
-      height: 90px;
-      span {
-        font-size: 16px;
-      }
-      h2 {
-        font-size: 20px;
-      }
-    }
-
-  }
-
-  @media screen and (max-width: 380px) {
-    .bestScore {
-      width: 100px;
-      height: 80px;
-      span {
-        font-size: 16px;
-      }
-      h2 {
-        font-size: 20px;
-      }
-    }
-
-  }
-
 </style>
 

@@ -28,22 +28,5 @@
     cursor: pointer;
   }
 
-  @media screen and (max-width: 436px) {
-    .logo {
-      width: 140px;
-      height: 90px;
-      line-height: 90px;
-      font-size: 22px;
-    }
-  }
-
-  @media screen and (max-width: 380px) {
-    .logo {
-      width: 130px;
-      height: 80px;
-      line-height: 80px;
-      font-size: 20px;
-    }
-  }
 </style>
 

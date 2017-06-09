@@ -8,9 +8,7 @@
 </template>
 
 <script>
-  import { mapActions} from 'vuex';
-  import { STATUS } from '../../store/mutation-types';
-
+import {STATUS} from '../../store/mutation-types';
   export default {
     data() {
       return STATUS;
@@ -24,9 +22,9 @@
       }
     },
     methods: {
-      ...mapActions([
-        'reset'
-      ])
+      reset(){
+        this.$emit('reseted');
+      }
     }
 
   }
@@ -45,6 +43,7 @@
   }
   a{
     text-decoration: none;
+    cursor: pointer;
   }
   .elapsed{
     position: absolute;

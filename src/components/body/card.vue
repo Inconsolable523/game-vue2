@@ -85,7 +85,6 @@
     position: absolute;
     left: 0;
     top: 0;
-    background: blue;/*？？？*/
     backface-visibility: hidden;
   }
 
@@ -93,23 +92,6 @@
     transform: rotateY(180deg);
     border: 2px solid #777;
     border-radius: 6px;
-  }
-
-
-  @media screen and (max-width: 450px) {
-    .wrap {
-      width: 92px;
-      height: 111px;
-      margin-right: 1px;
-    }
-  }
-
-  @media screen and (max-width: 414px) {
-    .wrap {
-      width: 80px;
-      height: 102px;
-      margin-right: 1px;
-    }
   }
 
 

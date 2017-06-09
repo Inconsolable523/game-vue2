@@ -30,7 +30,7 @@
     },
     created(){
       this.$store.commit('reset', {
-        leftmathed: 8,
+        leftmathed: 10,
         bestScore: localStorage.getItem('bestScore') || 9999,
         status: STATUS.READY,
         cards: shuffle(cardNames.concat(cardNames)).map(name => ({ flipped: false, cardName: name })),

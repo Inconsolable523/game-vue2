@@ -42,32 +42,6 @@
     }
   }
 
-  @media screen and (max-width: 436px) {
-    .matchProgress {
-      width: 110px;
-      height: 90px;
-      span {
-        font-size: 16px;
-      }
-      h2 {
-        font-size: 20px;
-      }
-    }
-  }
-
-  @media screen and (max-width: 380px) {
-    .matchProgress {
-      width: 100px;
-      height: 80px;
-      span {
-        font-size: 16px;
-      }
-      h2 {
-        font-size: 20px;
-      }
-    }
-  }
-
 
 </style>
 

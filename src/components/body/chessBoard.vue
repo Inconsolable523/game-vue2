@@ -83,18 +83,6 @@
     align-content: space-around;
   }
 
-  @media screen and (max-width: 450px) {
-    .chessboard {
-      height: 480px;
-      padding: 10px 0;
-    }
-  }
-
-  @media screen and (max-width: 370px) {
-    .chessboard {
-      height: 450px;
-    }
-  }
 
 </style>
 

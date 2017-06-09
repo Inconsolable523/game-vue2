@@ -3,7 +3,7 @@
     <!--组装组件-->
     <dash-board></dash-board>
     <chess-board></chess-board>
-    <play-status></play-status>
+    <play-status v-on:reseted="reset"></play-status>
   </div>
 </template>
 
@@ -28,14 +28,19 @@
     data() {
       return {}
     },
+    methods:{
+      reset(){
+        this.$store.commit('reset', {
+          leftmathed: 6,
+          bestScore: localStorage.getItem('bestScore') || 9999,
+          status: STATUS.READY,
+          cards: shuffle(cardNames.concat(cardNames)).map(name => ({ flipped: false, cardName: name })),
+          takeTime: 0
+        })
+      }
+    },
     created(){
-      this.$store.commit('reset', {
-        leftmathed: 6,
-        bestScore: localStorage.getItem('bestScore') || 9999,
-        status: STATUS.READY,
-        cards: shuffle(cardNames.concat(cardNames)).map(name => ({ flipped: false, cardName: name })),
-        takeTime: 0
-      })
+      this.reset();
     }
   }
 </script>

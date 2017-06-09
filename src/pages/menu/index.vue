@@ -40,10 +40,10 @@
       border-radius: 5px;
       background-color: #5979ac;
       line-height: 100px;
+      font-size: 32px;
       text-align: center;
       color: #fff;
       opacity: 0.7;
-      /*font-size: 22px;*/
       margin-top: 80px;
       margin-bottom: 70px;
     }
@@ -54,6 +54,7 @@
       border-radius: 4px;
       line-height: 80px;
       opacity: 0.7;
+      font-size: 22px;
       cursor:pointer;
       background-color: #bbada0;
       color: #fff;
