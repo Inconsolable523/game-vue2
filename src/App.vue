@@ -12,6 +12,7 @@
 
 <style lang="scss" scoped>
   .game-panel {
+    position: relative;
     width: 450px;
     margin: 0 auto;
     @media screen and (min-height: 780px) {

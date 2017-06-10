@@ -2,10 +2,15 @@
   <div class="chessBoard">
     <!--使用option定制状态-->
     <Card v-for="card in cards" :key="card.id" :option="card" v-on:flipped="onFlipped"></Card>
+    <transition name="fade">
+    <span v-if="leftMatched === 0" class="pass">Success！</span>
+    </transition>
   </div>
 </template>
 
 <script>
+//  TODO:bestScore状态共享了
+
   import Card from './card';
   import { mapActions } from 'vuex';
   import { STATUS } from '../../store/mutation-types';
@@ -17,7 +22,7 @@
     },
     data() {
       return {
-        lastCard:null
+        lastCard:null,
       }
     },
     computed: {
@@ -71,6 +76,7 @@
 
 <style lang="scss" scoped>
   .chessBoard {
+    position: relative;
     margin-top: 20px;
     width: 100%;
     background-color: #fff;
@@ -82,6 +88,24 @@
     align-items: center;
     align-content: space-around;
   }
+  .pass{
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: #646464;
+    font-size: 40px;
+    font-weight: 800;
+    transform: translate(-50%,-50%);
+    animation: 3s fade forwards;
+    @keyframes fade {
+      0% { opacity: 0.8 }
+      50% { transform: scale(2);}
+      100% { opacity: 0; }
+
+    }
+  }
+
 
 
 </style>
