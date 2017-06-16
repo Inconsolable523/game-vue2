@@ -1,4 +1,7 @@
 <template>
+  <!--//TODO:taketime和highestScore状态不应该共享
+          成功字样位置问题-->
+
   <div class="game-panel">
     <router-view></router-view>
   </div>

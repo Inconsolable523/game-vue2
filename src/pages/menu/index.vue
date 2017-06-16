@@ -52,6 +52,7 @@
       width: 40%;
       height: 80px;
       margin: 0 auto;
+      font-weight: 400;
       border-radius: 4px;
       line-height: 80px;
       opacity: 0.7;

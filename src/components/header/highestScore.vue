@@ -1,7 +1,7 @@
 <template>
   <div class="bestScore">
-    <span>Highest Speed</span>
-    <h2>{{bestScore}}</h2>
+    <span>Shortest Times</span>
+    <h2>{{bestScore}}s</h2>
   </div>
 </template>
 
@@ -31,6 +31,7 @@
     flex-direction: column;
     color: #eae0d1;
     span {
+      margin-top: 14px;
       font-size: 19px;
       font-weight: bold;
       width: 100%;

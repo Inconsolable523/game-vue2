@@ -1,5 +1,5 @@
 <template>
-  <h1 class="logo" @click="menu">Memu</h1>
+  <h1 class="logo" @click="menu">Menu</h1>
 </template>
 
 <script>

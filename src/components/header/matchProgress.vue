@@ -32,6 +32,7 @@
     flex-direction: column;
     color: #eae0d1;
     span {
+      margin-top: 14px;
       font-size: 19px;
       font-weight: bold;
       width: 100%;

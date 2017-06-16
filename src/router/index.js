@@ -12,7 +12,7 @@ const router = new Router({
   routes: [
     {
       path:'',
-      component: menu
+      component: menu //菜单
     },
     {
       path:'/menu',
@@ -20,15 +20,15 @@ const router = new Router({
     },
     {
       path: '/easy',
-      component: easy
+      component: easy //容易关卡
     },
     {
       path: '/normal',
-      component: normal
+      component: normal //普通关卡
     },
     {
       path: '/hard',
-      component: hard
+      component: hard  //困难关卡
     }
   ]
 })
